@@ -1,0 +1,46 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "Build OpenGL Project",
+			"command": "g++",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"main.cpp",
+				"Shader.cpp",
+				"Camera.cpp",
+				"Texture.cpp",
+				"glad.c",
+				"-o",
+				"${workspaceFolder}/main.exe",
+				"-I../Dependencies/Include",
+				"-L../Dependencies/Lib",
+				"-lglfw3",
+				"-lopengl32",
+				"-lgdi32"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"type": "shell",
+			"label": "Run OpenGL Project",
+			"command": "${workspaceFolder}/main.exe",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"dependsOn": "Build OpenGL Project",
+			"problemMatcher": []
+		}
+	]
+}

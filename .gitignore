@@ -1,0 +1,13 @@
+# Binaries & Executables
+*.exe
+*.o
+*.obj
+*.dll
+*.so
+*.dylib
+
+# Visual Studio / VS Code temp files
+.vscode/*.log
+.vscode/ipch/
+*.pdb
+*.ilk
